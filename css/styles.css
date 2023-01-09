@@ -1,0 +1,18 @@
+.fig {
+    border: 1px solid #aaa;
+    background-color: #ddd;
+}
+
+.grupo {
+    fill: #00000044;
+    stroke: #00000099;
+}
+
+.ejes {
+    font-size : 20px;
+}
+
+.ejes line{
+    stroke-width: 1;
+    stroke: #00000044;
+}
