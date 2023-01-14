@@ -51,7 +51,7 @@
           <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="dimensionestab" data-bs-toggle="tab" data-bs-target="#dimensionestab-pane" type="button" role="tab" aria-controls="dimensionestab-pane" aria-selected="false">Dimensiones</button>
+          <button class="nav-link" id="dimensionestab" data-bs-toggle="tab" data-bs-target="#dimensionestab-pane" type="button" role="tab" aria-controls="dimensionestab-pane" aria-selected="false">Scatterplot Calado y Eslora</button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="tabladatos-tab" data-bs-toggle="tab" data-bs-target="#tabladatos-tab-pane" type="button" role="tab" aria-controls="tabladatos-tab-pane" aria-selected="false" >Datos</button>
@@ -62,6 +62,37 @@
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
         <div class="tab-pane fade" id="dimensionestab-pane" role="tabpanel" aria-labelledby="dimensionestab" tabindex="0">
           <!--svg id="svgdimensionesbuques"class="fig" width="200px" height="200px"></svg-->
+          <div style="float: right;">
+          <table  class="table table-sm table-striped table-hover">
+            <thead>
+              <tr>
+                <th scope="col">ICON</th>
+                <th scope="col">MANIOBRISTA</th>
+              </tr>
+            </thead>
+              <tbody >
+                <tr><td><i class="fa-solid fa-ship car"></i></td><td class="dato">CARGILL</td></tr>
+                <tr><td><i class="fa-solid fa-ship cic"></i></td><td class="dato">CICE</td></tr>
+                <tr><td><i class="fa-solid fa-ship cpv"></i></td><td class="dato">CPV</td></tr>
+                <tr><td><i class="fa-solid fa-ship esj"></i></td><td class="dato">ESJ</td></tr>
+                <tr><td><i class="fa-solid fa-ship exc"></i></td><td class="dato">EXCELLENCE</td></tr>
+                <tr><td><i class="fa-solid fa-ship ica"></i></td><td class="dato">ICAVE</td></tr>             
+                <tr><td><i class="fa-solid fa-ship ope"></i></td><td class="dato">OPEVER</td></tr>
+                <tr><td><i class="fa-solid fa-ship pem"></i></td><td class="dato">PEMX</td></tr>
+                <tr><td><i class="fa-solid fa-ship pet"></i></td><td class="dato">PETRA</td></tr>
+                <tr><td><i class="fa-solid fa-ship sep"></i></td><td class="dato">SEPSA</td></tr>
+                <tr><td><i class="fa-solid fa-ship sip"></i></td><td class="dato">SIPPB</td></tr>
+                <tr><td><i class="fa-solid fa-ship ssa"></i></td><td class="dato">SSA</td></tr>
+                <tr><td><i class="fa-solid fa-ship tce"></i></td><td class="dato">TCE</td></tr>
+                <tr><td><i class="fa-solid fa-ship tmv"></i></td><td class="dato">TMV</td></tr>
+                <tr><td><i class="fa-solid fa-ship tng"></i></td><td class="dato">TNG</td></tr>
+                <tr><td><i class="fa-solid fa-ship vop"></i></td><td class="dato">VOPAK</td></tr>
+                <tr><td><i class="fa-solid fa-ship buque"></i></td><td class="dato">OTROS</td></tr>
+               
+                
+            </tbody>
+          </table>
+          </div> 
         </div>
         <div class="tab-pane fade" id="tabladatos-tab-pane" role="tabpanel" aria-labelledby="tabladatos-tab" tabindex="0">
           <p>
@@ -72,10 +103,15 @@
           <table  class="table table-sm table-striped table-hover">
             <thead>
               <tr>
+                <th scope="col">ICON</th>
                 <th scope="col">VID</th>
-                <th scope="col">NOM_BUQUE</th>
-                <th scope="col">NOM_NAVIERA</th>
-                <th scope="col">NOM_MUELLES</th>
+                <th scope="col">NOMBRE DEL BUQUE</th>
+                <th scope="col">NAVIERA</th>
+                <th scope="col">ESLORA (M)</th>
+                <th scope="col">CALADO (M)</th>
+                <th scope="col">MANIOBRISTA</th>
+                <th scope="col">MUELLE DE ATRAQUE</th>
+                
               </tr>
             </thead>
             <tbody id="renglonesdatos">

@@ -12,7 +12,98 @@
     font-size : 20px;
 }
 
-.ejes line{
+.ejes line {
     stroke-width: 1;
     stroke: #00000044;
+}
+
+.dato {
+    font-size: 12px !important;
+    color: gray;
+}
+
+.buque {
+    font-size: 12px;
+    color:white;
+    background-color: white;
+    text-shadow: 1px 1px white;}
+
+.cic {
+    background-color: orange;
+    text-shadow: 1px 1px orange;
+}
+
+.vop {
+    background-color: hotpix;
+    text-shadow: 1px 1px hotpix;
+}
+
+.ica {
+    background-color: magenta;
+    text-shadow: 1px 1px magenta;
+}
+
+.tng {
+    background-color: yellow;
+    text-shadow: 1px 1px yellow;
+}
+
+.ssa {
+    background-color:brown;
+    text-shadow: 1px 1px brown;
+}
+
+.sip {
+    background-color:mediumseagreen;
+    text-shadow: 1px 1px mediumseagreen;
+}
+
+.sep {
+    background-color:mediumseagreen;
+    text-shadow: 1px 1px mediumseagreen;
+}
+
+.exc {
+    background-color:rebeccapurple;
+    text-shadow: 1px 1px rebeccapurple;
+}
+
+.pem {
+    background-color: olive;
+    text-shadow: 1px 1px olive;
+}
+
+.pet {
+    background-color: royalblue;
+    text-shadow: 1px 1px royalblue;
+}
+
+.ope {
+    background-color: teal;
+    text-shadow: 1px 1px teal;
+}
+
+.car {
+    background-color: chartreuse;
+    text-shadow: 1px 1px chartreuse;
+}
+
+.esj {
+    background-color:chocolate;
+    text-shadow: 1px 1px chocolate;
+}
+
+.tce {
+    background-color:darkcyan;
+    text-shadow: 1px 1px darkcyan;
+}
+
+.cpv {
+    background-color:forestgreen;
+    text-shadow: 1px 1px forestgreen;
+}
+
+.tmv {
+    background-color:firebrick;
+    text-shadow: 1px 1px firebrick;
 }

@@ -17,9 +17,13 @@ const renderTablaDatos = (data) => {
     const tabla = d3.select("#renglonesdatos");
     let registros = tabla.selectAll("body > #renglonesdatos > tr").data(data);
     registros.enter().append("tr").html( (d) => `<tr>
+        <th scope="row"><i class="fa-solid fa-ship ${d.MANIOBRISTA.substring(0,3).toLowerCase()}"></i></th>
         <th scope="row">${d.VID}</th>
         <td>${d.NOM_BUQUE}</td>
         <td>${d.NOM_NAVIERA}</td>
+        <td>${d.ESLORA}</td>
+        <td>${d.CALADO}</td>
+        <td>${d.MANIOBRISTA}</td>
         <td>${d.NOM_MUELLES}</td>
       </tr>`)
 
@@ -28,7 +32,7 @@ const renderTablaDatos = (data) => {
 // DEFINICIÓN DE LA FUNCIÓN
 const renderDimensionesBuques = (data)=> {
     // calcular ancho, alto y márgenes del SVGs
-    const anchototal = +body.style("width").slice(0,-2) *.9 ;
+    const anchototal = +body.style("width").slice(0,-2) *.8;
     const altototal = anchototal * 9 / 16 *.8;
     console.log ("ancho total (px): " + anchototal);
     console.log ("alto total (px) " + altototal);
@@ -55,13 +59,27 @@ const renderDimensionesBuques = (data)=> {
         .attr("transform", `translate(${margins.left}, ${margins.top})`);
     
     g.append("rect").attr("x",0).attr("y",0).attr("width",anchografica).attr("height",altografica).attr("class","grupo");
+    
+    // SE USAN IMÁGENES DE BARCOS PARA LOS PUNTOS. 
+    // Usar el código Unicode f21A, queda \uf21A 
+    // Icono barco en fontawsome: https://fontawesome.com/icons/ship?s=solid&f=classic
+    // referencia: https://stackoverflow.com/questions/18416749/adding-fontawesome-icons-to-a-d3-graph
     g.selectAll("circle")
         .data(data)
         .enter()
+        .append("text")
+        .attr('x', d=> x(+d.ESLORA) )
+        .attr('y', d=> y(+d.CALADO) )
+        .attr('font-family', 'FontAwesome')
+        .attr("class", d=> "buque " + d.MANIOBRISTA.substring(0,3).toLowerCase() )
+        .text(function(d) { return '\uf21A' })
+         ;
+        /*
         .append('circle')
             .attr('cx', d=> x(+d.ESLORA) )
             .attr('cy', d=> y(+d.CALADO) )
-            .attr('r',5)        
+            .attr('r',5)           
+        */               
         
         ;
     
@@ -73,11 +91,21 @@ const renderDimensionesBuques = (data)=> {
     g.append("g").attr("class","ejes").call(yAxis);
 
     // títulos de la gráfica
+    //   título del eje X
     g.append("text")
         .attr("x", anchototal/2)
         .attr("y", altototal - 30)
         .attr("text-anchor", "middle")
-        .text("Calado y Eslora de los buques");
+        .text("Eslora de los buques");
+    //   título del eje y (con rotación)
+    g.append("g")
+        .attr("transform",`translate(0,${altototal/2})`)
+        .append("text")
+        .attr("y",-35)
+        .attr("transform","rotate(-90)")
+        .attr("text-anchor", "middle")
+        .text("Calado de los buques");
+        
 }
 
 //EJECUTAR LA FUNCIÓN PRINCIPAL
