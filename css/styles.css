@@ -114,3 +114,37 @@
     background-color:firebrick;
     text-shadow: 1px 1px firebrick;
 }
+
+/* CSS DEL HISTOGRAMA */
+.figbarras {
+    background-color: #ddd;
+  }
+  
+  .textobarras {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: Impact;
+    fill: #457b9d;
+  }
+  
+  .grupobarras {
+    fill: #ffffff44;
+    stroke: #00000099;
+  }
+  
+  .ejesbarras {
+    font-size: 16px;
+    font-family: "Fira Code";
+  }
+  
+  .ejesbarras line {
+    stroke-width: 1;
+    stroke: #33333344;
+    stroke-dasharray: 4 2;
+  }
+  
+  .labels {
+    font-size: 20px;
+    font-family: "Fira Code";
+  }
+  

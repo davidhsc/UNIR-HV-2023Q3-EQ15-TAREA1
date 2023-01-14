@@ -48,18 +48,44 @@
           <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+          <button class="nav-link" id="tabladatos-tab" data-bs-toggle="tab" data-bs-target="#tabladatos-tab-pane" type="button" role="tab" aria-controls="tabladatos-tab-pane" aria-selected="false" >Datos</button>
         </li>
+        
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="dimensionestab" data-bs-toggle="tab" data-bs-target="#dimensionestab-pane" type="button" role="tab" aria-controls="dimensionestab-pane" aria-selected="false">Scatterplot Calado y Eslora</button>
         </li>
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="tabladatos-tab" data-bs-toggle="tab" data-bs-target="#tabladatos-tab-pane" type="button" role="tab" aria-controls="tabladatos-tab-pane" aria-selected="false" >Datos</button>
+          <button class="nav-link" id="histograma-tab" data-bs-toggle="tab" data-bs-target="#histograma-tab-pane" type="button" role="tab" aria-controls="histograma-tab-pane" aria-selected="false">Buques trabajados por Maniobrista</button>
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
-        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="histograma-tab-pane" role="tabpanel" aria-labelledby="histograma-tab" tabindex="0">
+
+          <p>Buques trabajados por maniobrista</p>
+          <div class="row">
+            <div class="col-10">
+              <div id="histo">
+              </div>
+            </div>
+            <div class="col-2">
+              <table  class="table table-sm table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">MANIOBRISTA</th>
+                    <th scope="col">COUNT BUQUES</th>
+                    
+                  </tr>
+                </thead>
+                <tbody id="renglonesdatosbuquexmaniobrista">
+                  
+                </tbody>
+              </table> 
+            </div>
+          </div>
+          
+
+        </div>
         <div class="tab-pane fade" id="dimensionestab-pane" role="tabpanel" aria-labelledby="dimensionestab" tabindex="0">
           <p></p>
           <p>Seleccione un buque para visualizar detalles</p>
@@ -155,5 +181,6 @@
     crossorigin="anonymous"
   ></script>
     <script src="js/app.js"></script>
+    <script src="js/app2.js"></script>
   </body>
 </html>
