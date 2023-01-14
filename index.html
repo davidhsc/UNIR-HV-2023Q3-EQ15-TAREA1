@@ -61,38 +61,57 @@
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
         <div class="tab-pane fade" id="dimensionestab-pane" role="tabpanel" aria-labelledby="dimensionestab" tabindex="0">
-          <!--svg id="svgdimensionesbuques"class="fig" width="200px" height="200px"></svg-->
-          <div style="float: right;">
-          <table  class="table table-sm table-striped table-hover">
-            <thead>
-              <tr>
-                <th scope="col">ICON</th>
-                <th scope="col">MANIOBRISTA</th>
-              </tr>
-            </thead>
-              <tbody >
-                <tr><td><i class="fa-solid fa-ship car"></i></td><td class="dato">CARGILL</td></tr>
-                <tr><td><i class="fa-solid fa-ship cic"></i></td><td class="dato">CICE</td></tr>
-                <tr><td><i class="fa-solid fa-ship cpv"></i></td><td class="dato">CPV</td></tr>
-                <tr><td><i class="fa-solid fa-ship esj"></i></td><td class="dato">ESJ</td></tr>
-                <tr><td><i class="fa-solid fa-ship exc"></i></td><td class="dato">EXCELLENCE</td></tr>
-                <tr><td><i class="fa-solid fa-ship ica"></i></td><td class="dato">ICAVE</td></tr>             
-                <tr><td><i class="fa-solid fa-ship ope"></i></td><td class="dato">OPEVER</td></tr>
-                <tr><td><i class="fa-solid fa-ship pem"></i></td><td class="dato">PEMX</td></tr>
-                <tr><td><i class="fa-solid fa-ship pet"></i></td><td class="dato">PETRA</td></tr>
-                <tr><td><i class="fa-solid fa-ship sep"></i></td><td class="dato">SEPSA</td></tr>
-                <tr><td><i class="fa-solid fa-ship sip"></i></td><td class="dato">SIPPB</td></tr>
-                <tr><td><i class="fa-solid fa-ship ssa"></i></td><td class="dato">SSA</td></tr>
-                <tr><td><i class="fa-solid fa-ship tce"></i></td><td class="dato">TCE</td></tr>
-                <tr><td><i class="fa-solid fa-ship tmv"></i></td><td class="dato">TMV</td></tr>
-                <tr><td><i class="fa-solid fa-ship tng"></i></td><td class="dato">TNG</td></tr>
-                <tr><td><i class="fa-solid fa-ship vop"></i></td><td class="dato">VOPAK</td></tr>
-                <tr><td><i class="fa-solid fa-ship buque"></i></td><td class="dato">OTROS</td></tr>
-               
-                
-            </tbody>
-          </table>
-          </div> 
+          <p></p>
+          <p>Seleccione un buque para visualizar detalles</p>
+          <div class="row">
+            <div class="col-10">
+              <div id="graf" style="position:relative">
+                <div id="tooltip" class="p-2 bg-secondary rounded-2 shadow-sm text-white small" style="position:absolute; left:25px; top:25px; display: none;">
+                  Buque: <strong><spam id="tooltipnombrebuque"> </spam></strong><br>
+                  Naviera: <strong><spam id="tooltipnaviera"> </spam></strong><br>
+                  Maniobrista: <strong><spam id="tooltipmaniobrista"> </spam></strong><br>
+                  Eslora: <strong><spam id="tooltipeslora"> </spam></strong><br>
+                  Calado: <strong><spam id="tooltipcalado"></spam></strong><br>
+                </div>
+              </div>  
+            </div>
+            <div class="col-2">
+              <div>
+                <table  class="table table-sm table-striped table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">ICON</th>
+                      <th scope="col">MANIOBRISTA</th>
+                    </tr>
+                  </thead>
+                    <tbody >
+                      <tr><td><i class="fa-solid fa-ship car"></i></td><td class="dato">CARGILL</td></tr>
+                      <tr><td><i class="fa-solid fa-ship cic"></i></td><td class="dato">CICE</td></tr>
+                      <tr><td><i class="fa-solid fa-ship cpv"></i></td><td class="dato">CPV</td></tr>
+                      <tr><td><i class="fa-solid fa-ship esj"></i></td><td class="dato">ESJ</td></tr>
+                      <tr><td><i class="fa-solid fa-ship exc"></i></td><td class="dato">EXCELLENCE</td></tr>
+                      <tr><td><i class="fa-solid fa-ship ica"></i></td><td class="dato">ICAVE</td></tr>             
+                      <tr><td><i class="fa-solid fa-ship ope"></i></td><td class="dato">OPEVER</td></tr>
+                      <tr><td><i class="fa-solid fa-ship pem"></i></td><td class="dato">PEMX</td></tr>
+                      <tr><td><i class="fa-solid fa-ship pet"></i></td><td class="dato">PETRA</td></tr>
+                      <tr><td><i class="fa-solid fa-ship sep"></i></td><td class="dato">SEPSA</td></tr>
+                      <tr><td><i class="fa-solid fa-ship sip"></i></td><td class="dato">SIPPB</td></tr>
+                      <tr><td><i class="fa-solid fa-ship ssa"></i></td><td class="dato">SSA</td></tr>
+                      <tr><td><i class="fa-solid fa-ship tce"></i></td><td class="dato">TCE</td></tr>
+                      <tr><td><i class="fa-solid fa-ship tmv"></i></td><td class="dato">TMV</td></tr>
+                      <tr><td><i class="fa-solid fa-ship tng"></i></td><td class="dato">TNG</td></tr>
+                      <tr><td><i class="fa-solid fa-ship vop"></i></td><td class="dato">VOPAK</td></tr>
+                      <tr><td><i class="fa-solid fa-ship buque"></i></td><td class="dato">OTROS</td></tr>
+                     
+                      
+                  </tbody>
+                </table>
+                </div> 
+            </div>
+          </div>
+
+          
+          
         </div>
         <div class="tab-pane fade" id="tabladatos-tab-pane" role="tabpanel" aria-labelledby="tabladatos-tab" tabindex="0">
           <p>
