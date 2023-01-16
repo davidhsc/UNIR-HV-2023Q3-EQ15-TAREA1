@@ -18,8 +18,7 @@ Histórico de Buques que atracaron en el Puerto: Relación de buques con tres me
 - Fuente: Administración del Sistema Portuario Nacional Veracruz.
 - Web Service: http://www.puertodeveracruz.com.mx/ws/BuquesHistoricos}
 - Diccionario de datos (página web): https://www.puertodeveracruz.com.mx/archivos/DatosAbiertos/DiccionarioGeneral.pdf 
-
-## Autores UNIR-HV-2023Q3-EQ15-TAREA1
+## Autores
 
 - David Díaz de la Cruz
 - Diego Armando Domínguez González
@@ -28,3 +27,6 @@ Histórico de Buques que atracaron en el Puerto: Relación de buques con tres me
 ## Profesor
 
  - LUIS FERNANDO FRANCO JIMENEZ
+## 🔗 Links
+- [Repositorio Github](https://github.com/davidhsc/UNIR-HV-2023Q3-EQ15-TAREA1)
+- [página web](https://davidhsc.github.io/UNIR-HV-2023Q3-EQ15-TAREA1/)
