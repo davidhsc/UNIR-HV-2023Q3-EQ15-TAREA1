@@ -150,12 +150,24 @@ const renderDimensionesBuques = (data)=> {
 const toogleBuquesVisibles = function(idBoton, claveManiobrista){
 
     if ( d3.select("#"+idBoton).classed("green") ){
-        d3.select("#"+idBoton).classed("green",false).attr("class","fa-solid fa-eye gray");
+        d3.select("#"+idBoton).classed("green",false).attr("class","btneye fa-solid fa-eye gray");
     } else {
-        d3.select("#"+idBoton).classed("gray",false).attr("class","fa-solid fa-eye green");
+        d3.select("#"+idBoton).classed("gray",false).attr("class","btneye fa-solid fa-eye green");
     }
     
     d3.selectAll("."+claveManiobrista).classed("oculto",!d3.selectAll("."+claveManiobrista).classed("oculto") );
+
+}
+
+const toogleAllBuquesVisibles = function(){
+
+    if ( d3.select("#botonToogleAllBuquesVisibles").classed("green") ){
+        d3.selectAll(".btneye").classed("green",false).attr("class","btneye fa-solid fa-eye gray");
+    } else {
+        d3.selectAll(".btneye").classed("gray",false).attr("class","btneye fa-solid fa-eye green");
+    }
+    
+    d3.selectAll(".buque").classed("oculto",!d3.selectAll(".buque").classed("oculto") );
 
 }
 
