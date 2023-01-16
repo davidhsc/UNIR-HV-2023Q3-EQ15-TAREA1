@@ -11,7 +11,7 @@ const tooltipeslora = body.select("#tooltipeslora");
 const tooltipcalado = body.select("#tooltipcalado");
 
 // DEFINICIÓN DE LA FUNCIÓN PRICIPAL
-// llamará a las demás funciones después de cargar los datos
+// llamará a las demás funciones después de cargar los datos del json
 const loadDataAndRenderAll = async() => {
     data = await d3.json("./data/buquesHistoricos.json", d3.autoType);
     console.log(data);
@@ -20,7 +20,8 @@ const loadDataAndRenderAll = async() => {
     renderDimensionesBuques(data);
 }
 
-// DEFINICIÓN DE LA FUNCIÓN
+// DEFINICIÓN DE LA FUNCIÓN 
+// Mostrar los datos en la tabla.
 const renderTablaDatos = (data) => {
     const tabla = d3.select("#renglonesdatos");
     let registros = tabla.selectAll("body > #renglonesdatos > tr").data(data);
@@ -38,6 +39,7 @@ const renderTablaDatos = (data) => {
 } 
 
 // DEFINICIÓN DE LA FUNCIÓN
+// renderizar la gráfica scatter plot
 const renderDimensionesBuques = (data)=> {
     // calcular ancho, alto y márgenes del SVGs
     const anchototal = +body.style("width").slice(0,-2) *.8;
@@ -142,6 +144,18 @@ const renderDimensionesBuques = (data)=> {
 
 }
 
+// hacer el "toggle" para mostrar u ocultar los buques de la maniobrista
+const toogleBuquesVisibles = function(idBoton, claveManiobrista){
+
+    if ( d3.select("#"+idBoton).classed("green") ){
+        d3.select("#"+idBoton).classed("green",false).attr("class","fa-solid fa-eye gray");
+    } else {
+        d3.select("#"+idBoton).classed("gray",false).attr("class","fa-solid fa-eye green");
+    }
+    
+    d3.selectAll("."+claveManiobrista).classed("oculto",!d3.selectAll("."+claveManiobrista).classed("oculto") );
+
+}
 
 
 //EJECUTAR LA FUNCIÓN PRINCIPAL

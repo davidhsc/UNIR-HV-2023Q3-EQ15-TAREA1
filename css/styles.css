@@ -27,6 +27,20 @@
     color: gray;
 }
 
+/* para ocultar los puntos del scatter plot*/
+.oculto {
+    display: none;
+}
+
+.green {
+    color: green;
+}
+
+.gray {
+    color: gray;
+}
+
+/*CSS para los buques del scatter plot*/
 .buque {
     font-size: 12px;
     color:white;
