@@ -1,4 +1,6 @@
-
+/* ----------------------------------*/
+/* CÓDIGO PARA LA PESTAÑA SCATTERPLOT */
+/* ----------------------------------*/
 const body = d3.select("body"); //selector principal body
 let data = null;                //variable principal de datos
 

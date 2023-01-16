@@ -1,3 +1,6 @@
+/* ----------------------------------*/
+/* CÓDIGO PARA LA GRÁFICA DE BARRAS */
+/* ----------------------------------*/
 const body2 = d3.select("body"); //selector principal body
 const histo = d3.select("#histo")
 
