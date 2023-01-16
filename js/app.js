@@ -163,11 +163,14 @@ const toogleAllBuquesVisibles = function(){
 
     if ( d3.select("#botonToogleAllBuquesVisibles").classed("green") ){
         d3.selectAll(".btneye").classed("green",false).attr("class","btneye fa-solid fa-eye gray");
+        d3.selectAll(".buque").classed("oculto",true );
+
     } else {
         d3.selectAll(".btneye").classed("gray",false).attr("class","btneye fa-solid fa-eye green");
+        d3.selectAll(".buque").classed("oculto",false );
+
     }
     
-    d3.selectAll(".buque").classed("oculto",!d3.selectAll(".buque").classed("oculto") );
 
 }
 
